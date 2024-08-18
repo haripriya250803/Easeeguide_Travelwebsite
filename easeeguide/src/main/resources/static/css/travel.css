@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+header {
+    position: relative;
+    height: 100%;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+#backgroundVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header h1 {
+    margin: 0;
+    padding-top: 20%;
+    font-size: 4rem;
+    color:white;
+
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 25px;
+    margin: 0;
+    display: flex;
+    justify-content:right;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+section {
+    text-align:center;
+}
+
+.destination {
+    margin: 20px 0;
+}
+
+.destination img {
+    width: 40vh;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form select, form textarea, form button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #555;
+}h
+.karthik{
+    padding:20px;
+}
+body{
+    background-image: url(https://wallpaperaccess.com/full/1431622.jpg);
+    width:100%;
+    height:100vh;
+}
+.dest1{
+   display:flex; 
+   justify-content:center;
+   
+}
+.dest2{
+    display:flex; 
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-bottom: 100px;
+    justify-content: center;
+ }
+
+ .logo{
+    height:300px;
+    padding-bottom: 0%;
+ }
+.welcm{
+    font-size:40px
+}
+pre{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.icon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#icons{
+    padding:8px;
+}
+#story:hover{
+    text-decoration: underline;
+
+}
+h1{
+    text-align: center;
+
+}
+#about{
+    padding-top: 20px;
+}
+.welcm{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#world{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    mix-blend-mode:luminosity;
+}
+button{
+    background-color:rgb(39, 39, 105);
+    color:#ffffff;
+    padding:5px 10px;
+    border:None;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+.destination{
+    padding-left:40px;
+    padding-right:40px;
+}
+#name,#email,#numberOfPeople,#location,#phoneNumber{
+    font-family:'Times New Roman', Times, serif;
+    border-radius:15px;
+    width:60%;
+    
+    
+}
+#register{
+    width:30%;
+}
+#registrationForm{
+    font-family:'Times New Roman', Times, serif;
+    color:black;
+    font-weight: bold;
+
+}
+#q1{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-left:40px;
+    padding-right:40px;
+    
+}
+#q2{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-left:40px;
+    padding-right:40px;
+}
+ /* @media only screen and (max-width: 200px) {
+    /* Styles for screens smaller than 600px */
+/* } */ 
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+    /* Styles for screens between 601px and 768px */
+ } 
+

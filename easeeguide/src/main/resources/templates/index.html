@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Advanced Travel Website</title>
+    <link rel="stylesheet" href="/css/travel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <video autoplay muted loop id="backgroundVideo">
+            <source src="/images/855633-hd_1920_1080_25fps.mp4" type="video/mp4">
+        </video>
+       
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#home">Destinations</a></li>
+                <li><a href="#booking">Book a Trip</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <h1 id="world">Explore the World with Easeeguide</h1>
+    </header>
+
+    <section id="home">
+        
+        <p class="welcm">Welcome to EASEEGUIDE</p>
+        <p class="welcm">Discover amazing places around the world with us!</p>
+        <img src="/images/logo2 (2).png " alt="logo" class="logo">
+    </section>
+
+    <section class="destinations1">
+        <h2>Popular Destinations</h2>
+       
+
+        <div class="dest1">
+            <div class="destination">
+                <a href="https://www.example.com" target="_blank"><img src="/images/charminar.jpeg" alt="Tokyo"></a>
+                <a href=""><h3>Charminar,Hyderabad <pre><a href="#booking"><button>Book Now</button></a></pre></h3></a>
+                
+            </div>
+            <div class="destination">
+                <a href="https://www.example.com" target="_blank"><img src="/images/bidar.jpeg" alt="bidar"></a>
+                <a href=""><h3>Bidar, Karnataka<pre><a href="#booking"><button>Book Now</button></a></pre></h3></a>
+               
+            </div>
+        </div>
+        <div class="dest2">
+            <div class="destination">
+                <a href="https://www.example.com" target="_blank"><img src="/images/swarnagiri.jpeg" alt="tokyo"></a>
+                <a href=""><h3>Swarnagiri,Hyderabad<pre><a href="#booking"><button>Book Now</button></a></pre></h3></a>
+                
+            </div>
+            <!-- <div class="destination">
+                <a href="https://www.example.com" target="_blank"><img src="/images/kerala.jpg" alt="Kerala"></a>
+                <a href=""><h3>Kerala,India<pre><a href="#booking"><button>Book Now</button></a></pre></h3></a>
+              
+            </div>
+            <div class="destination">
+                <a href="https://www.example.com" target="_blank"><img src="/images/goaaa.jpeg" alt="Goa"></a>
+                <a href=""><h3>Goa,India<pre><a href="#booking"><button>Book Now</button></a></pre></h3></a>
+                
+            </div> -->
+        </div>
+    </section>
+
+    <!-- <section id="booking">
+        <h2>Book a Trip</h2>
+        <form id="bookingForm">
+            <label for="place">Place:</label>
+            <select id="place" name="place" required>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="bidar">Bidar</option>
+                <option value="charminar">Charminar</option>
+                <option value="Swarnagiri">Swarnagiri</option>
+                Add more options as needed -->
+            <!-- </select>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone no">Contact No:</label>
+            <input type="tel" id="phone no" name="phone no" required>
+            <label for="people">No of people:</label>
+            <input type="number" id="people" name="people" required>
+            <button type="submit">Book Now</button>
+        </form>
+    </section> -->
+   
+   <div id="booking"></div>
+    <head>
+        <title>Registration Page</title>
+        html
+  Copy Code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            const user = {
+                name: document.getElementById('name').value,
+                phoneNumber: document.getElementById('phoneNumber').value,
+                email: document.getElementById('email').value,
+                numberOfPeople: document.getElementById('numberOfPeople').value,
+                location: document.getElementById('location').value
+            };
+
+            console.log('Submitting form with user data:', user);
+
+            fetch('/path', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+            .then(response => {
+                console.log('Response status:', response.status);
+                return response.json().then(data => ({
+                    status: response.status,
+                    body: data
+                }));
+            })
+            .then(res => {
+                console.log('Response body:', res.body);
+                if (res.status === 200 && res.body.success) {
+                    alert('User registered successfully!');
+                    clearForm();
+                } else {
+                    throw new Error(res.body.message || 'Registration Successful');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert( error.message);
+            });
+        }
+
+        function clearForm() {
+            document.getElementById('registrationForm').reset();
+            console.log('Form cleared');
+        }
+    </script>
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+        <form id="registrationForm" onsubmit="submitForm(event)">
+            <label for="name">Name: </label><input type="text" id="name" /><br />
+            <label for="phoneNumber">Phone Number: </label><input type="text" id="phoneNumber" /><br />
+            <label for="email">Email: </label><input type="text" id="email" /><br />
+            <label for="numberOfPeople">No. of People: </label><input type="number" id="numberOfPeople"/><br />
+            <label for="location">Location: </label><input type="text" id="location" /><br />
+            <button id="register" type="submit">Register</button>
+        </form>
+    </body>
+    <section id="about">
+        <h2>About Us</h2>
+        <p><pre>
+          Welcome to Easeeguide, your ultimate travel companion!At Easeeguide, we believe that travel should be easy, enjoyable, and accessible to everyone. 
+          Our mission is to inspire and empower travelers to explore the world with confidence and ease. 
+          Whether youâ€™re planning a weekend getaway, a family vacation, or a solo adventure, weâ€™re here to provide you with the tools, tips,
+           and inspiration you need to make your journey unforgettable.
+          <b id="story">Our Story</b>
+          Founded by a group of passionate travelers, Easeeguide was born out of a desire to share our love for exploring new places and experiencing different cultures.
+           We noticed a gap in the market for a travel resource that was both comprehensive and user-friendly.
+            So, we set out to create a platform that combines expert advice, practical information, and personal stories to help you plan your perfect trip.
+         <b id="story"> What We Offer</b> 
+            <i><b>Travel Guides</b></i>:In-depth guides to destinations around the world, featuring must-see attractions, hidden gems, and local insights.
+            <i><b>Tips and Advice</b></i>:Practical tips on everything from packing and budgeting to staying safe and healthy on the road.
+            <i><b>Itineraries</b></i>:Curated itineraries for all types of travelers, whether youâ€™re looking for adventure, relaxation, or a mix of both.
+            <i><b>Travel Stories</b></i>:Inspiring stories from fellow travelers, offering a glimpse into their experiences and adventures.
+            <i><b>Resources</b></i>:A wide range of resources, including travel checklists, booking tools, and more to make your travel planning process seamless.   
+        </pre>
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2><div class="icon">
+       <a href="https://www.instagram.com/easeeguide?igsh=MTdxdmdtNnpoeGdqMQ=="><i id="icons" class="fa-brands fa-instagram"></i></a>
+        <i id="icons" class="fa-brands fa-youtube"></i>
+        <i id="icons" class="fa-brands fa-x-twitter"></i>
+        <i id="icons" class="fa-brands fa-linkedin"></i>
+    </div>
+    <div>
+    <i id="icons" class="fa-solid fa-phone"><strong><pre>+91 6309832714</pre></strong></i>
+    <i id="icons" class="fa-regular fa-envelope"><pre>admin@easeeguide.com</pre></i>
+    </div>
+       
+    </section>
+    <section><div id="q1">
+        <div><h1>How do I book a trip on Easeeguide?</h1>
+        <p>Go to the destinations page on the website and choose the destination where you want to go.
+             Then click on the "Book Now" button, which will redirect you to the registration page. 
+                  There, you can fill out the form and register for the trip.</p>
+               
+                <h1>What payment methods do you accept?</h1>
+        <p>we accept all kind of payments</p></div>
+        <div id="q2">
+            <div><h1>How can I contact customer support?</h1>
+                <p>You can reach our customer support team by email, phone, or through our live chat feature on the website. 
+                We're here to assist you with any questions or concerns you may have Remember, these are just examples, 
+                and you can tailor the questions and answers to fit your specific website and services.</p>
+            <h1>Is my personal information secure?</h1>
+            <p>  Absolutely! We take your privacy and security seriously.We use industry-standard 
+            encryption technology to protect your personal information.</p>
+           </div>
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Travel Website. All rights reserved.</p>
+    </footer>
+    <div>
+        
+    </div>
+    <script src="travel.js"></script>
+</body>
+</html>
