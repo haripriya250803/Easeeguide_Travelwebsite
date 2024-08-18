@@ -21,7 +21,7 @@ public class UserController {
     @GetMapping("/project")
     public ModelAndView superv() {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("index.html");
+        modelAndView.setViewName("/index.html");
         return modelAndView;
     }
 
